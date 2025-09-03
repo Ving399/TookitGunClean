@@ -1,0 +1,18 @@
+{
+  "name": "toolkit_gun",
+  "version": "1.0.0",
+  "description": "Proyecto de ejemplo con Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "author": "Ving Sánchez",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "openai": "^5.16.0"
+  }
+}
