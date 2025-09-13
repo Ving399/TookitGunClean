@@ -43,8 +43,7 @@ app.post("/form", async (req, res) => {
   });
 
   // Devolver la respuesta al frontend
-  res.json({ respuesta: respuestaGPT });
-  //res.send(`<h2>Respuesta de GPT:</h2><p>${respuestaGPT}</p>`);
+  res.send(`<h2>Respuesta de GPT:</h2><p>${respuestaGPT}</p>`);
 });
 
 // Levantar el servidor

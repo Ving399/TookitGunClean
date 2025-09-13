@@ -15,10 +15,8 @@ const client = new OpenAI({
  * @param {number} data.historias Número de historias relacionadas
  * @returns {Promise<string>} Respuesta generada por GPT
  */
-
 export async function generarRespuesta({ prompt, parrafos, preguntas, historias }) {
-  const promptCompleto = `${prompt} Explicalo en ${parrafos} parrafos, con ${preguntas} preguntas y ${historias} historia(s) relacionadas
-   los parrafos deben venir en un <p> y las preguntas en una lista <ul><li>`;
+  const promptCompleto = `${prompt} Explicalo en ${parrafos} parrafos, con ${preguntas} preguntas y ${historias} historia(s) relacionadas.`;
 
   try {
     const response = await client.chat.completions.create({
