@@ -34,7 +34,8 @@ app.post("/form", async (req, res) => {
 
   console.log("Datos del formulario:", req.body);
 
-  // Llamamos a GPT
+  // Llamamos a GPT, le pasamos el promtp con los numeros que nos dio el formulario y esperamos la respuesta
+  //la respuesta se guarda en RespuestaGPT
   const respuestaGPT = await generarRespuesta({
     prompt,
     parrafos: Number(parrafos),
@@ -43,6 +44,8 @@ app.post("/form", async (req, res) => {
   });
 
   // Devolver la respuesta al frontend
+  //al usar .json estamos metiendo la respuesta en un json, recuerdas que un json tiene clave y  contenido
+  //respuesta es la clave que defines y contenido es respuestaGPT
   res.json({ respuesta: respuestaGPT });
   //res.send(`<h2>Respuesta de GPT:</h2><p>${respuestaGPT}</p>`);
 });
