@@ -3,6 +3,8 @@
 
     --main-text-color: #173857;
     --button-text-color: #ffffff;
+    --blur-text-color: #DADCF7;
+    --Chilling-text-color: #ee9700;
 
     --green: #5BE586;
     --green-dark: #50c675;
@@ -21,10 +23,127 @@ body {
     background-repeat: no-repeat; /* No repetir la imagen */
 }
 
+.grid-general {
+    display: grid;
+    grid-template-columns: 150px 1fr 40px; /* 1ra columna fija, 2da se adapta */
+    gap: 10px; /* espacio opcional entre columnas */
+}
+
+
+.main-icon {
+    width: 70px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción */
+    /*margin: 20px; */
+}
+
+.cover {
+    width: 100%;      /* ocupa todo el ancho del contenedor (col2) */
+    height: 200px;     /* mantiene la proporción original */
+    overflow: hidden;  /* oculta lo que sobresalga de la img */
+    object-fit: cover;       /* recorta sin deformar */
+    object-position: center; /* centra la parte visible */
+    border-radius: 20px;
+
+}
+
+.col1 {
+    align-items: center;
+    margin: 20px;
+}
+
+.col2 {
+    align-items: center;
+}
+
+.btn-down {
+    all: unset; /* quita prácticamente todo estilo por defecto */
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: 100%;
+    margin-left: 95%;
+}
+
+.btn-down:hover {
+  background-color: var(--green-dark);
+}
+
+button:active {
+  transform: scale(0.95);     /* botón “presionado” se achica */
+}
+
+.icon-down {
+    width: 40px;
+    height: 36px;
+}
+
+.titulo-1 {
+    color: var(--blur-text-color);
+
+}
+
+h1 {
+    font-family: var(--font-principal);
+    font-size: 24px;
+    margin-left: 10px;
+    color: var(--main-text-color);
+}
+
 p {
-    background-color: #9187F7;
+    background-color: var(--purple-1);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-family: var(--font-principal);
+    color: var(--main-text-color);
+
+}
+
+ul {
+  list-style: none;     /* quita los puntos */
+  margin: 0;            /* quita márgenes externos */
+  padding: 0;           /* quita sangría interna */
 }
 
 li {
-    background-color: #50c675;
+    background-color: var(--green);
+    list-style-type: none; /* quita los puntos */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+
+    font-size: 16px;
+    font-family: var(--font-principal);
+    color: var(--main-text-color);
+
+}
+
+.endpointer {
+    
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+
+
+    background-color: var(--purple-1);
+    max-width: 80%;
+    margin: 10px;
+    margin-left: 10%;
+    padding: 10px;
+    border-radius: 10px;
+
+    font-size: 34px;
+    font-family: var(--font-principal);
+    color: var(--Chilling-text-color);
+}
+
+.endpointer-img {
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.cellcounter {
+    margin: 40px;
 }

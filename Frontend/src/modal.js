@@ -1,11 +1,15 @@
 
 const btnAbrirModal = document.querySelector('#create-button');
+const btnCerrarModal = document.querySelector('#btn-close-modal')
 const modal = document.querySelector('#modal');
 
 btnAbrirModal.addEventListener('click', () => {
     modal.showModal();
 });
 
+btnCerrarModal.addEventListener('click', ()=> {
+  modal.close();
+})
 
 const form = document.querySelector("form"); // seleccionamos el formulario
 

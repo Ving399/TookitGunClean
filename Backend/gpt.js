@@ -17,17 +17,18 @@ const client = new OpenAI({
  */
 
 export async function generarRespuesta({ prompt, parrafos, preguntas, historias }) {
-  const promptCompleto = `${prompt} Explicalo en ${parrafos} parrafos, con ${preguntas} preguntas y ${historias} historia(s) relacionadas
-   los parrafos deben venir en un <p> y las preguntas en una lista <ul><li>`;
+  const promptCompleto = `${prompt} Explicalo en ${parrafos} parrafos, con ${preguntas} preguntas y ${historias} historia(s) relacionadas.
+   Los parrafos deben venir en un <p> y las preguntas en una lista <ul><li>
+   Debes entregar un titulo h1 relacionado al ${prompt} y deberá ir al inicio de la respuesta `;
 
   try {
     const response = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-        { role: "system", content: "Eres un tutor muy claro y educativo." },
+        { role: "system", content: "Eres un tutor muy claro y educativo. No te sales de lo que te piden, Solo entregas parrafos en <p>, listas <ul>, <li> y historias relacionadas en <p>. No traigas etiquetas diferentes, aunque el promp te lo pida." },
         { role: "user", content: promptCompleto }
       ],
-      max_tokens: 5000 // ajusta según lo que necesites
+      max_tokens: 8000 // ajusta según lo que necesites
     });
 
     return response.choices[0].message.content;

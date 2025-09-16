@@ -79,6 +79,16 @@ body {
     padding-right: 30px;
 }
 
+.btn-close {
+    all: unset; /* quita prácticamente todo estilo por defecto */
+    border-radius: 100%;
+}
+
+.btn-close-modal-icon {
+    width: 30px;
+    height: 30px;
+}
+
 .modal {
 
     background-color: var(--purple-1);

@@ -13,10 +13,45 @@
 
 </head>
 <body>
-  <h1>Respuesta Generada</h1>
-  <div id="respuesta-container">Cargando...</div>
+
+  <div id="respuesta" class="grid-general">
+
+    <div class="col1">
+      <img class="main-icon" src="assets/icons/RebelS_ICON 1.svg">
+    </div>
+
+    <div class="col2">
+
+      <img class="cover" src="assets/images/garden.jpg">
+      <button id="dwn-pdf" class="btn-down">
+        <img class="icon-down" src="assets/icons/icon.svg">
+      </button>
+
+      <h1 class="titulo-1">Tu resumen esta listo...</h1>
+      <div id="respuesta-container">Cargando...</div>
+
+      <div class="endpointer">
+        <div class="endpointer-1">
+          <img class="endpointer-img" src="assets/images/house.jpg">
+        </div>
+        <div class="endpointer-2">
+          <h2> !TEMA COMPLETADO!</h2>
+          <p>Sigue generando y respondiendo respuestas para sumar mas cx</p>
+        </div>
+        <div class="cell-counter">
+          <img class="cellcounter" src="assets/icons/cellcounter.svg">
+          
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
 
   <!-- Este script se encargará de mostrar la respuesta -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="/src/respuesta.js"></script>
 </body>
 </html>
