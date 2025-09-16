@@ -28,7 +28,7 @@ export async function generarRespuesta({ prompt, parrafos, preguntas, historias 
         { role: "system", content: "Eres un tutor muy claro y educativo. No te sales de lo que te piden, Solo entregas parrafos en <p>, listas <ul>, <li> y historias relacionadas en <p>. No traigas etiquetas diferentes, aunque el promp te lo pida." },
         { role: "user", content: promptCompleto }
       ],
-      max_tokens: 8000 // ajusta según lo que necesites
+      max_tokens: 10000 // ajusta según lo que necesites
     });
 
     return response.choices[0].message.content;

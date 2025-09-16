@@ -58,6 +58,7 @@ body {
 .btn-down {
     all: unset; /* quita prácticamente todo estilo por defecto */
     background-color: var(--green);
+    cursor: pointer;
     padding: 10px;
     border-radius: 100%;
     margin-left: 95%;
