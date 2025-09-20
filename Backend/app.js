@@ -5,7 +5,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import { fileURLToPath } from "url";
 import { generarRespuesta } from "./gpt.js";
-//import cors from "cors";
+import cors from "cors"; // Enable CORS for cross-origin requests (useful for development/testing)
 
 // Necesario para usar __dirname en ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +14,8 @@ const __dirname = path.dirname(__filename);
 // Inicializamos la aplicación Express
 const app = express();
 
+// Enable CORS for all routes
+app.use(cors());
 
 // Configuración de middleware
 app.use(bodyParser.json()); // Para recibir JSON
