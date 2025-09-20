@@ -5,6 +5,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import { fileURLToPath } from "url";
 import { generarRespuesta } from "./gpt.js";
+//import cors from "cors";
 
 // Necesario para usar __dirname en ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -13,12 +14,13 @@ const __dirname = path.dirname(__filename);
 // Inicializamos la aplicación Express
 const app = express();
 
+
 // Configuración de middleware
 app.use(bodyParser.json()); // Para recibir JSON
 app.use(bodyParser.urlencoded({ extended: true })); // Para recibir formularios
 
 // Configuración del puerto
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware para servir archivos estáticos
 app.use(express.static(path.join(__dirname, "../Frontend")));

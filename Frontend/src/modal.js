@@ -1,4 +1,5 @@
 
+const BACKEND_URL = " https://backend-qg8ihvqsh-vings-projects-d703a66a.vercel.app";
 const btnAbrirModal = document.querySelector('#create-button');
 const btnCerrarModal = document.querySelector('#btn-close-modal')
 const modal = document.querySelector('#modal');
@@ -13,6 +14,8 @@ btnCerrarModal.addEventListener('click', ()=> {
 
 const form = document.querySelector("form"); // seleccionamos el formulario
 
+// ---Funcion de envio del formulario----
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault(); // Evita que el formulario se envíe de forma tradicional y recargue la página
 
@@ -23,8 +26,8 @@ form.addEventListener("submit", async (e) => {
   const historias = Number(document.getElementById("number-pages").value);
 
   try {
-    // 2️⃣ Llamamos al backend usando fetch
-    const response = await fetch("/form", {
+    // 2️⃣ Llamamos al backend usando fetch ${BACKEND_URL}
+    const response = await fetch(`/form`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -47,3 +50,6 @@ form.addEventListener("submit", async (e) => {
     alert("Hubo un problema al generar la respuesta. Intenta de nuevo.");
   }
 });
+
+
+

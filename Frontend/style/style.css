@@ -105,7 +105,7 @@ body {
 
 .modal {
 
-    overflow: hidden; /* oculta barras de scroll */
+    /* overflow: hidden;  oculta barras de scroll */
     background-color: var(--purple-1);
     border: none; 
     border-radius: 30px;

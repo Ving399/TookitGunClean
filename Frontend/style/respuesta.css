@@ -10,6 +10,9 @@
     --green-dark: #50c675;
     --purple-1: #DADCF7;
     --purple-2: #9187F7;
+    --blue-1: #99c7fc;
+    --blue-dark: #4A90E2;
+    --bluegreen-1: #b6fef0; 
 
     --font-principal: 'League Spartan', sans-serif;
 
@@ -99,6 +102,8 @@ p {
     font-family: var(--font-principal);
     color: var(--main-text-color);
 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
+
 }
 
 ul {
@@ -119,7 +124,48 @@ li {
     font-family: var(--font-principal);
     color: var(--main-text-color);
 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
+
 }
+
+table {
+  color: var(--main-text-color);
+  /*border: 0px solid #ccc;*/
+  /*border-collapse: collapse;*/
+  margin-left: 10%;
+  width: 80%;
+  
+  border: none;
+  border-collapse: separate;   /* no fusiona los bordes */
+  border-spacing: 0;           /* quita espacio extra */
+  border-radius: 10px;         /* esquinas redondeadas externas */
+  overflow: hidden;            /* recorta las celdas dentro del borde */
+
+  font-family: var(--font-principal);
+  font-size: 14px;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+th, td {
+  border: 0px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--blue-dark);
+}
+
+td {
+  background-color: var(--blue-1);
+}
+
+
+tr:hover td {
+  background-color: var(--blue-dark);
+}
+
 
 .endpointer {
     
@@ -148,3 +194,18 @@ li {
 .cellcounter {
     margin: 40px;
 }
+
+
+.mermaid {
+  max-width: 60%;                /* Que no se salga de su contenedor */
+  margin: 1rem auto;             /* centrado horizontal automático */
+  overflow-x: auto;              /* Scroll horizontal si el diagrama es muy ancho */
+  background: var(--bluegreen-1);           /* Fondo opcional */
+  padding: 1rem;                 /* Espacio interno */
+  border-radius: 8px;            /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera */
+  text-align: center;            /* Centra texto/nodos si quieres */
+}
+
+
+
