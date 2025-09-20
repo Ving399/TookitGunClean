@@ -1,5 +1,4 @@
 
-const BACKEND_URL = " https://backend-qg8ihvqsh-vings-projects-d703a66a.vercel.app";
 const btnAbrirModal = document.querySelector('#create-button');
 const btnCerrarModal = document.querySelector('#btn-close-modal')
 const modal = document.querySelector('#modal');
@@ -26,7 +25,7 @@ form.addEventListener("submit", async (e) => {
   const historias = Number(document.getElementById("number-pages").value);
 
   try {
-    // 2️⃣ Llamamos al backend usando fetch ${BACKEND_URL}
+    // 2️⃣ Llamamos al backend usando fetch (relative for unified deployment)
     const response = await fetch(`/form`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

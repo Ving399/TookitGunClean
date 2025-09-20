@@ -207,5 +207,63 @@ tr:hover td {
   text-align: center;            /* Centra texto/nodos si quieres */
 }
 
+/* Mobile responsiveness for response page */
+@media (max-width: 768px) {
+    .grid-general {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .col1 {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .col2 {
+        margin: 0 10px;
+    }
+
+    .cover {
+        height: 150px;
+    }
+
+    .btn-down {
+        margin-left: 80%;
+    }
+
+    .titulo-1, h1 {
+        font-size: 20px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+
+    table {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .endpointer {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    .endpointer-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cellcounter {
+        margin: 20px;
+    }
+
+    .mermaid {
+        max-width: 90%;
+    }
+}
+
 
 

@@ -223,7 +223,7 @@ body {
 
 /* ------------------------------------------- */
 /* BLOQUE FINAL: quitar flechitas (spinners) de inputs tipo number */
-input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -231,4 +231,37 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+/* Mobile responsiveness for modal */
+@media (max-width: 768px) {
+    .modal {
+        max-width: 90vw;
+        max-height: none;
+    }
+
+    #title-modal {
+        font-size: 24px;
+    }
+
+    #parrafo-modal {
+        font-size: 18px;
+        max-width: none;
+    }
+
+    #prompt {
+        width: 90%;
+    }
+
+    #label-prompt, #label-r, #label-pages {
+        font-size: 20px;
+    }
+
+    #number-p, #number-r, #number-pages {
+        width: 80px;
+    }
+
+    .submit-button {
+        font-size: 24px;
+    }
 }
