@@ -118,7 +118,7 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.modal-list {
+.modal-list-1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,6 +130,45 @@ body {
     margin: 0; /* Elimina el margen por defecto */
 }
 
+.modal-list {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /*  repeat(3, 1fr) 3 columnas iguales */
+  grid-auto-rows: minmax(auto, auto);
+  gap: 10px;
+}
+
+.text-form {
+    margin: 10px;
+    width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; /* no importa, el truco está en el input */
+  max-height: 50px;
+}
+
+.icon-form {
+   margin: 1px;  
+}
+
+.input-line-1 {
+    display: flex;
+    align-items: center; 
+}
+
+
+.parche {
+    max-width: 40px;
+    max-height: 40px;
+    margin: 4px;
+}
+
 .submit-button {
     background-color: var(--green);
     color: var(--button-text-color);
@@ -138,7 +177,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 
-    margin-top: 40px;
+    
     padding: 10px 20px;
 
 
@@ -168,12 +207,12 @@ body {
 
 #parrafo-modal {
     font-size: 24px;
-    font-weight: lighter;
-    max-width: 450px;
+    font-family: var(--font-principal);
+    max-width: 500px;
     margin-top: 10px;
 }
 
-#prompt {
+#prompt, #tabla, #diagrama {
     border: none;
     outline: none;
     background-color: var(--purple-2);
@@ -188,37 +227,43 @@ body {
 
 }
 
-#label-prompt {
-    font-size:24px;
-    margin: 20px;
+#tabla, #diagrama {
+    border: none;
+    outline: none;
+    background-color: var(--purple-2);
+    border-radius: 20px;
+    width: 260px;
+    height: 40px;
+    margin: 4px;
+
+    font-family: 'League Spartan', sans-serif;
+    color: var(--button-text-color);
+    text-align: center;
+    font-size: 18px;
+
+}
+
+#label-prompt, #label-r, #label-historias, #lable-table, #lable-diagrama {
+    font-size:20px;
+    margin: 10px;
 }
 
 
-#label-r {
-    font-size: 24px;
-    margin: 20px;
-}
-
-
-#label-pages {
-    font-size: 24px;
-    margin: 20px;
-}
-
-#number-p, #number-r, #number-pages {
+#parrafo, #reactivos, #historias {
     border: none;
     outline: none;
     background-color: var(--purple-2);
     border-radius: 20px;
     width: 100px;
     height: 40px;
+    margin-left: 165px;
 
     font-family: 'League Spartan', sans-serif;
     color: var(--button-text-color);
     text-align: center;
     font-size: 18px;
-}
 
+}
 
 
 /* ------------------------------------------- */
@@ -240,6 +285,29 @@ input[type=number] {
         max-height: none;
     }
 
+    .modal-list {
+        gap: 5px;
+        margin: 10px;
+    }
+
+    .text-form {
+        width: 180px;
+        margin: 2px;
+    }
+
+    .input-form {
+        margin: 2px;
+    }
+
+    .icon-form {
+        margin: 2px;
+    }
+
+    .parche {
+        max-width: 25px;
+        max-height: 25px;
+    }
+
     #title-modal {
         font-size: 24px;
     }
@@ -253,12 +321,21 @@ input[type=number] {
         width: 90%;
     }
 
-    #label-prompt, #label-r, #label-pages {
-        font-size: 20px;
+    #label-prompt, #label-r, #label-historias, #lable-table, #lable-diagrama {
+        font-size: 16px;
+        margin: 1px;
     }
 
-    #number-p, #number-r, #number-pages {
-        width: 80px;
+    #parrafo, #reactivos, #historias {
+        width: 50px;
+        height: 30px;
+        margin-left: 0;
+        margin-left: 40px;
+    }
+
+    #tabla, #diagrama {
+        width: 100px;
+        height: 25px;
     }
 
     .submit-button {

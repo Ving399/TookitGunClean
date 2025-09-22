@@ -11,18 +11,22 @@ btnCerrarModal.addEventListener('click', ()=> {
   modal.close();
 })
 
+//Variable que selecicona el formulario
 const form = document.querySelector("form"); // seleccionamos el formulario
 
 // ---Funcion de envio del formulario----
-
+//ENVIA ESTE FORMULARIO CON EL METODO POST A /FORM
 form.addEventListener("submit", async (e) => {
   e.preventDefault(); // Evita que el formulario se envíe de forma tradicional y recargue la página
 
   // 1️⃣ Tomamos los valores del formulario
+  //tomas el id del input
   const prompt = document.getElementById("prompt").value;
-  const parrafos = Number(document.getElementById("number-p").value);
-  const preguntas = Number(document.getElementById("number-r").value);
-  const historias = Number(document.getElementById("number-pages").value);
+  const parrafos = Number(document.getElementById("parrafo").value);
+  const preguntas = Number(document.getElementById("reactivos").value);
+  const historias = Number(document.getElementById("historias").value);
+  const tabla = document.getElementById("tabla").value;
+  const diagrama = document.getElementById("diagrama").value;
 
   try {
     // 2️⃣ Llamamos al backend usando fetch (relative for unified deployment)
@@ -31,9 +35,11 @@ form.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         prompt,
+        tabla,
+        diagrama,
         "parrafos-number": parrafos,
         "reactivos-number": preguntas,
-        "paginas-number": historias
+        "hisotorias-number": historias //paginas-number
       })
     });
 

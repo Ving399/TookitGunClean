@@ -32,9 +32,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
 
-// Ruta para recibir el formulario
+// FUNCION QUE RECIBE el formulario
+//CUANDO TENGAS UN POST DE /FORM HAZ ESTO...
 app.post("/form", async (req, res) => {
-  const { prompt, "parrafos-number": parrafos, "reactivos-number": preguntas, "paginas-number": historias } = req.body;
+  const { prompt, tabla, diagrama, "parrafos-number": parrafos, "reactivos-number": preguntas, "hisotorias-number": historias } = req.body;
 
   console.log("Datos del formulario:", req.body);
 
@@ -42,6 +43,8 @@ app.post("/form", async (req, res) => {
   //la respuesta se guarda en RespuestaGPT
   const respuestaGPT = await generarRespuesta({
     prompt,
+    tabla,
+    diagrama,
     parrafos: Number(parrafos),
     preguntas: Number(preguntas),
     historias: Number(historias)

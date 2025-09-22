@@ -16,8 +16,8 @@ const client = new OpenAI({
  * @returns {Promise<string>} Respuesta generada por GPT
  */
 
-export async function generarRespuesta({ prompt, parrafos, preguntas, historias }) {
-  const promptCompleto = `${prompt} Explicalo en ${parrafos} parrafos, con ${preguntas} preguntas y ${historias} historia(s) relacionadas.
+export async function generarRespuesta({ prompt, tabla, diagrama, parrafos, preguntas, historias }) {
+  const promptCompleto = `${prompt} Explicalo en ${parrafos} parrafos, con ${preguntas} preguntas y ${historias} historia(s) relacionadas. Una tabla de ${tabla}, un diagrama de flujo de ${diagrama}
    Los parrafos deben venir en un <p> y las preguntas en una lista <ul><li>
    Si el prompt pide una tabla deberás traer la tabla en una etiqueta <table>, deberá incluir un <thead> asi como un <tbody> las filas en una etiqueta <tr> y las  celdas en una etiqueta <td>
    Debes entregar un titulo h1 relacionado al ${prompt} y deberá ir al inicio de la respuesta 

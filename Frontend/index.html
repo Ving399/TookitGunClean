@@ -20,39 +20,73 @@
     <div class="main">
         <img class="main-icon" src="assets/icons/RebelS_ICON 1.svg">
         <h1 class="main-title">Toolkit Gun</h1>
-        <p class="main-description">Guias de estudio para alumnos rebeldes</p>
+        <p class="main-description">Potencia tus horas de estudio</p>
         <button id="create-button" class="main-button">
             <span class="main-span">CREAR GUÍA</span>
         </button>
     </div>
 
     <dialog id="modal" class="modal">
+        
         <button id="btn-close-modal" class="btn-close">
             <img class="btn-close-modal-icon" src="assets/icons/x icon.svg" alt="">
         </button>
+
         <form action="/form" method="POST">
-            <ul class="modal-list">
+            
+            <ul class="modal-list-1">
 
-                <H1 id="title-modal">¿Que quieres estudiar hoy?</H1>
+                <H1  class="input-line-1" id="title-modal">¿Que quieres estudiar hoy?</H1>
 
-                <p id="parrafo-modal">Describe el tema que quieres estudiar, selecciona los items necesarios y comienza el viaje</p>
+                <p  class="input-line-1" id="parrafo-modal">Describe el tema que quieres estudiar, selecciona los items necesarios y comienza el viaje</p>
 
-                <li><textarea id="prompt" type="text" name="prompt" placeholder="Escribe tu texto aquí..."></textarea></li>
-
-                <li id="label-prompt"><label for="parrafo">¿Cúantos párrafos quieres leer?</label></li>
-
-                <li><input id="number-p" type="number" id="parrafo" name="parrafos-number" min="1" max="10"></li>
-
-                <li id="label-r"><label for="reactivos">¿Cúantos reactivos quieres responder?</label></li>
-
-                <li><input id="number-r" type="number" id="reactivos" name="reactivos-number" min="1" max="10"></li>
-
-                <li id="label-pages"><label for="paginas">¿Cuantas Historias relacionadas quieres?</label></li>
-
-                <li><input id="number-pages" type="number" id="paginas" name="paginas-number" min="1" max="10"></li>
-                
-                <li><button class="submit-button" type="submit"> <span class="submit-span">CREAR</span> </button></li>
+                <li class="input-line-1"><textarea id="prompt" type="text" name="prompt" placeholder="Escribe tu texto aquí..."></textarea></li>
+            
             </ul>
+            
+            <div class="modal-list">
+                
+                
+                <div class="text-form"><label id="label-prompt"for="parrafo">Párrafos a leer</label></div> 
+                <div class="input-form"><input id="parrafo" type="number" name="parrafos-number" min="0" max="10"></div> 
+                <div class="icon-form"><img  class="parche" src="assets/icons/Parche P.svg"></div> 
+                
+
+                
+                <div class="text-form"><label id="label-r" for="reactivos">Preguntas relacionadas</label></div> 
+                <div class="input-form"><input id="reactivos" type="number" name="reactivos-number" min="0" max="10"></div> 
+                <div class="icon-form"><img  class="parche" src="assets/icons/Parche A2.svg"></div> 
+                
+
+
+                
+                <div class="text-form"><label id="label-historias" for="historias">Historias relacionadas</label></div> 
+                <div class="input-form"><input id="historias" type="number" name="historias-number" min="0" max="10"></div> 
+                <div class="icon-form"><img  class="parche" src="assets/icons/Parche H.svg"></div> 
+                
+
+
+                
+                <div class="text-form"><label id="lable-table" for="tabla">Quiero una tabla de</label></div> 
+                <div class="input-form"><textarea id="tabla" type="text" name="table"></textarea></div> 
+                <div class="icon-form"><img  class="parche" src="assets/icons/Parche t.svg"></div> 
+                
+
+
+                
+                <div class="text-form"><label id="lable-diagrama" for="tabla">Quiero una diagrama de</label></div> 
+                <div class="input-form"><textarea id="diagrama" type="text" name="diagram"></textarea></div> 
+                <div class="icon-form"><img  class="parche" src="assets//icons/Parche D.svg"></div> 
+                
+            
+            </div>
+
+            <li class="modal-list-1">
+                <button class="submit-button" type="submit">
+                     <span class="submit-span">CREAR</span>
+                </button>
+            </li>
+
         </form>
     </dialog>
 
